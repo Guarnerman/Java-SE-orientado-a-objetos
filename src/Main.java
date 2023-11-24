@@ -1,17 +1,14 @@
+import javax.print.Doc;
+
 import static UI.UIMenu.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        Doctor myDoctor = new Doctor();
-        myDoctor.name = "Vicente Fernandez";
-        myDoctor.showName();
-        myDoctor.showId();
+        //showMenu();
 
-
-        Doctor myDoctorAnn = new Doctor();
-        myDoctor.showId();;
-
-        showMenu();
+        Doctor myDoctor = new Doctor("Chente", "Oculista");
+        System.out.println(myDoctor.name);
+        System.out.println(myDoctor.specialty);
     }
 }
