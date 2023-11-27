@@ -19,4 +19,6 @@ public class Patient {
             this.email = email;
             this.weight = 78.5;
         }
+
+
 }
