@@ -12,5 +12,10 @@ public class Main {
         System.out.println(myDoctor.specialty);
 
         Patient patient = new Patient("Pelé", "futbol@gol.com");
+        patient.setWeight(78.5);
+        System.out.println(patient.getWeight());
+
+        patient.setPhoneNumber("557738822");
+        System.out.println(patient.getPhoneNumber());
     }
 }
