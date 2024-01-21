@@ -12,10 +12,21 @@ public class Main {
         System.out.println(myDoctor.specialty);
 
         Patient patient = new Patient("Pelé", "futbol@gol.com");
-        patient.setWeight(78.5);
+        Patient patient2 = new Patient( "Ulises", "gs@gmail.com");
+
+        System.out.println(patient.getName());
+        System.out.println(patient2.getName());
+        patient2 = patient;
+
+        System.out.println(patient2.getName());
+
+        patient2.setName("Yeye");
+        System.out.println(patient.getName());
+        System.out.println(patient2.getName());
+        /*patient.setWeight(78.5);
         System.out.println(patient.getWeight());
 
         patient.setPhoneNumber("557738822");
-        System.out.println(patient.getPhoneNumber());
+        System.out.println(patient.getPhoneNumber());*/
     }
 }
