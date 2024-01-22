@@ -1,5 +1,7 @@
 import javax.print.Doc;
 
+import java.util.Date;
+
 import static UI.UIMenu.*;
 
 public class Main {
@@ -8,10 +10,17 @@ public class Main {
         //showMenu();
 
         Doctor myDoctor = new Doctor("Chente", "Oculista");
-        System.out.println(myDoctor.name);
-        System.out.println(myDoctor.specialty);
+        myDoctor.addAvailableAppointment(new Date(), "4pm");
+        myDoctor.addAvailableAppointment(new Date(), "10am");
+        myDoctor.addAvailableAppointment(new Date(), "1pm");
 
-        Patient patient = new Patient("Pelé", "futbol@gol.com");
+        System.out.println(myDoctor.getAvailableAppointments());
+
+        for (Doctor.AvailableAppointment availableAppointment: myDoctor.getAvailableAppointments()){
+            System.out.println(availableAppointment.getDate() + " " + availableAppointment.getTime());
+        }
+
+        /*Patient patient = new Patient("Pelé", "futbol@gol.com");
         Patient patient2 = new Patient( "Ulises", "gs@gmail.com");
 
         System.out.println(patient.getName());
@@ -22,11 +31,8 @@ public class Main {
 
         patient2.setName("Yeye");
         System.out.println(patient.getName());
-        System.out.println(patient2.getName());
-        /*patient.setWeight(78.5);
-        System.out.println(patient.getWeight());
+        System.out.println(patient2.getName());*/
 
-        patient.setPhoneNumber("557738822");
-        System.out.println(patient.getPhoneNumber());*/
+
     }
 }
